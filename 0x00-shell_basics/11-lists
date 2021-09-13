@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(ls .. /boot -a -l -R)"
+echo "$(ls -a -l . .. /boot)"
