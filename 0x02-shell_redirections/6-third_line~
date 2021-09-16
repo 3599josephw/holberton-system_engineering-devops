@@ -1,0 +1,2 @@
+#!/bin/bash
+head -4 testfile | tail +4
