@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+##yeehaw pardner
+i=1
+
+while [ $i -le 100 ]
+do
+    f=$(( i % 3 ))
+    b=$(( i % 5 ))
+   
+    if [ $f -eq 0 ] && [ $b -eq 0 ]
+    then
+	echo "FizzBuzz"
+    elif [ $f -eq 0 ]
+	 then
+	 echo "Fizz"
+    elif [ $b -eq 0 ]
+    then
+	echo "Buzz"
+    else
+	echo "$i"
+    fi
+    
+	 
+   i=$(( i + 1 ))
+done

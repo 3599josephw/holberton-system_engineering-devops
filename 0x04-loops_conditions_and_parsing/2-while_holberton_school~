@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+##While loop to print Holberton School 10 times
+myvar=0
+while [ $myvar lt 10 ]
+do
+    echo "Holberton School"
+    =$(( i +1 ))
+done

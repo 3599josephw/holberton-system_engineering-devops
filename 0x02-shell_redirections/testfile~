@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$("this is a string with a newline"\n)"

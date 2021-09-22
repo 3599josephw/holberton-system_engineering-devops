@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+##For loop to display current directory
+for f in *
+do
+    echo "$f" | cut -d- -f2
+done
