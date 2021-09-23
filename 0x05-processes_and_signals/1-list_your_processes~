@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+## List of processes. Might be 'ps aux' or 'ps -axjf'
+ps -eH u
