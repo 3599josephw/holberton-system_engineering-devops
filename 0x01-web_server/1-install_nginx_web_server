@@ -2,3 +2,4 @@
 # installs nginx on a server
 
 sudo apt-get -y install nginx
+echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html
