@@ -7,11 +7,11 @@ sudo apt-get -y install nginx
 sudo service nginx start
 echo 'Hello World!' | sudo tee /var/www/html/index.html
 
-string="\tlocation / {"
-replace="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://www.youtube.com/watch?v=TWTfhyvzTx0;\n\t}\n\n\tlocation / {"
-sudo sed -i "s@^$string@$replace@" /etc/nginx/sites-available/default
-
 sudo touch /var/www/html/error404.html
 sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404.html
+
+string="\tlocation / {"
+replace="\terror_page 404 /error404.html;\n\n\tlocation /redirect_me {\n\t\treturn 301 \$scheme://www.youtube.com/watch?v=TWTfhyvzTx0;\n\t}\n\n\tlocation / {"
+sudo sed -i "s@^$string@$replace@" /etc/nginx/sites-available/default
 
 sudo service nginx restart
