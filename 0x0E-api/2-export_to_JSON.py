@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """"Task 2"""
+import json
 import requests
 from sys import argv
 
@@ -22,7 +23,7 @@ if __name__ == "__main__":
             tmp_dict["username"] = user.get("username")
             todo.append(tmp_dict)
 
-    json_dict = {argv[1]: todo}
+    json_dict = {user.get("id"): todo}
 
     with open(filename, 'w') as f:
-        f.write(str(json_dict))
+        json.dump(json_dict, f)
