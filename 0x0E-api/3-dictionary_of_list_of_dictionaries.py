@@ -1,24 +1,19 @@
 #!/usr/bin/python3
 """"Task 3"""
-import json
-from sys import argv
-from urllib import request
+import requests
+
 
 if __name__ == "__main__":
 
-    req = request.urlopen('https://jsonplaceholder.typicode.com/users')
-    user = json.loads(req.read())
+    user = requests.get('https://jsonplaceholder.typicode.com/users').json()
 
-    req = request.urlopen('https://jsonplaceholder.typicode.com/todos')
-    todo_all = json.loads(req.read())
-
-    req.close()
+    todoall = requests.get('https://jsonplaceholder.typicode.com/todos').json()
 
     json_dict = {}
 
     for i in range(len(user)):
         todo = []
-        for item in todo_all:
+        for item in todoall:
             if i + 1 == item.get("userId"):
                 tmp_dict = {}
                 tmp_dict["username"] = user[i].get("username")
