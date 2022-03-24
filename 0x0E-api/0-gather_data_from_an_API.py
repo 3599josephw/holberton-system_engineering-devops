@@ -1,20 +1,17 @@
 #!/usr/bin/python3
 """"Task 0"""
 import json
+import requests
 from sys import argv
-from urllib import request
+
 
 
 if __name__ == "__main__":
 
-    req = request.urlopen('https://jsonplaceholder.typicode.com/users/{}'
-                          .format(argv[1]))
-    user = json.loads(req.read())
+    user = requests.get('https://jsonplaceholder.typicode.com/users/{}'
+                          .format(argv[1])).json()
 
-    req = request.urlopen('https://jsonplaceholder.typicode.com/todos')
-    todo_all = json.loads(req.read())
-
-    req.close()
+    todo_all = requests.get('https://jsonplaceholder.typicode.com/todos').json()
 
     todo = []
     success = 0
