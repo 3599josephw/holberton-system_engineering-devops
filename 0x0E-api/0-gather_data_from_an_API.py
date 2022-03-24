@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """"Task 0"""
-from sys import argv
 import json
+from sys import argv
 from urllib import request
 
 
