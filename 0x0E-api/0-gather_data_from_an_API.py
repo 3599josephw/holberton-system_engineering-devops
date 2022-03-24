@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """"Task 0"""
-import json
 from sys import argv
+import json
 from urllib import request
+
 
 if __name__ == "__main__":
 
