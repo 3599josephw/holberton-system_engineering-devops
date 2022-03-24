@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """"Task 3"""
+import json
 import requests
 
 
@@ -20,7 +21,7 @@ if __name__ == "__main__":
                 tmp_dict["task"] = item.get("title")
                 tmp_dict["completed"] = item.get("completed")
                 todo.append(tmp_dict)
-        json_dict[str(i + 1)] = todo
+        json_dict[i + 1] = todo
 
     with open("todo_all_employees.json", 'w') as f:
-        f.write(str(json_dict))
+        json.dump(json_dict, f)
