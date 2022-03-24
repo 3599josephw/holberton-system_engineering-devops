@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""Task 1"""
+"""Task 1"""
 import json
 from sys import argv
 from urllib import request
