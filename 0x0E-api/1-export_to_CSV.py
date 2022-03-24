@@ -24,8 +24,7 @@ if __name__ == "__main__":
 
     with open(filename, 'w') as f:
         for item in todo:
-            f.write('"%s","%s","%s","%s"\n' %
-                    (item.get("userId"),
-                    user.get("username"),
-                    item.get("completed"),
-                    item.get("title")))
+            f.write('"%s","%s","%s","%s"\n' % (item.get("userId"),
+                                               user.get("username"),
+                                               item.get("completed"),
+                                               item.get("title")))
